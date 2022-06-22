@@ -196,7 +196,15 @@ Usefull command
 =
 ##### Synchronization info
 ```Bash
-curl -s localhost:${PALOMA_PORT}657/status
+palomad status 2>&1 | jq .SyncInfo
+```
+##### Node info
+```Bash
+palomad status 2>&1 | jq .NodeInfo
+```
+##### Show node id
+```Bash
+palomad tendermint show-node-id
 ```
 ##### Get wallet balance
 ```Bash
