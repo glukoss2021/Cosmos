@@ -1,4 +1,4 @@
-Defund validator node
+Quicksilver validator node
 =
 ##### Official documentation:
 > [Validator setup instructions](https://github.com/ingenuity-build/testnets)
