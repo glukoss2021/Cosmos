@@ -144,7 +144,7 @@ sudo systemctl restart palomad && sudo journalctl -u palomad -f -o cat
 ```
 ### Check synchronization status ("catching_up": false is synced)
 ```Bash
-palomad status 2>&1 | jq .SyncInfo
+curl -s localhost:${PALOMA_PORT}657/status
 ```
 ### Create wallet (!Safe your mnemonic)
 ```Bash
@@ -188,15 +188,7 @@ Usefull command
 =
 ##### Synchronization info
 ```Bash
-palomad status 2>&1 | jq .SyncInfo
-```
-##### Node info
-```Bash
-palomad status 2>&1 | jq .NodeInfo
-```
-##### Show node id
-```Bash
-palomad tendermint show-node-id
+curl -s localhost:${PALOMA_PORT}657/status
 ```
 ##### Get wallet balance
 ```Bash
