@@ -230,8 +230,8 @@ defundd tx slashing unjail \
 ```Bash
 sudo systemctl stop defundd
 sudo systemctl disable defundd
-rm /etc/systemd/system/defund* -rf
-rm $(which defundd) -rf
+sudo rm /etc/systemd/system/defund* -rf
+sudo rm $(which defundd) -rf
 rm $HOME/.defund* -rf
 rm $HOME/defund -rf
 ```
