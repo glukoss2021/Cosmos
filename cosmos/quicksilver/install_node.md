@@ -249,5 +249,5 @@ sudo systemctl disable quicksilverd
 sudo rm /etc/systemd/system/quicksilverd* -rf
 sudo rm $(which quicksilverd) -rf
 sudo rm $HOME/.quicksilverd* -rf
-sudo rm $HOME/quicksilverd -rf
+sudo rm $HOME/quicksilver -rf
 ```
