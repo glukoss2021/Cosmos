@@ -41,7 +41,7 @@ sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/api/libwasmvm.
 ```
 ### Init app
 ```Bash
-palomad init <moniker> --chain-id paloma
+palomad init <moniker> --chain-id paloma-testnet-5
 ```
 ### Download genesis
 ```Bash
@@ -53,7 +53,7 @@ wget -qO $HOME/.paloma/config/addrbook.json "https://raw.githubusercontent.com/p
 ```
 ### Set chain and keyring-backend to config
 ```Bash
-palomad config chain-id paloma
+palomad config chain-id paloma-testnet-5
 palomad config keyring-backend file
 ```
 ### Config app
@@ -179,7 +179,7 @@ palomad tx staking create-validator \
   --min-self-delegation "1" \
   --moniker <moniker> \
   --node "tcp://164.90.134.139:26656" \
-  --chain-id paloma \
+  --chain-id paloma-testnet-5 \
   --yes \
   -b block
 ```
@@ -216,19 +216,19 @@ palomad tx bank send <wallet_address> <to_wallet_address> 10000000ugrain
 ```
 ##### Voting
 ```Bash
-palomad tx gov vote 1 yes --from <wallet_name> --chain-id=paloma
+palomad tx gov vote 1 yes --from <wallet_name> --chain-id=paloma-testnet-5
 ```
 ##### Delegate stake
 ```Bash
-palomad tx staking delegate <valoper_address> 10000000ugrain--from=<wallet_name> --chain-id=paloma --gas=auto
+palomad tx staking delegate <valoper_address> 10000000ugrain--from=<wallet_name> --chain-id=paloma-testnet-5 --gas=auto
 ```
 ##### Withdraw all rewards
 ```Bash
-palomad tx distribution withdraw-all-rewards --from=<wallet_name> --chain-id=paloma --gas=auto
+palomad tx distribution withdraw-all-rewards --from=<wallet_name> --chain-id=paloma-testnet-5 --gas=auto
 ```
 ##### Withdraw rewards with commision
 ```Bash
-palomad tx distribution withdraw-rewards <valoper_address> --from=<wallet_name> --commission --chain-id=paloma --gas=auto
+palomad tx distribution withdraw-rewards <valoper_address> --from=<wallet_name> --commission --chain-id=paloma-testnet-5 --gas=auto
 ```
 ##### Edit validator
 ```Bash
@@ -237,7 +237,7 @@ palomad tx staking edit-validator \
 --website="web" \
 --identity="identity" \
 --details="details" \
---chain-id=paloma \
+--chain-id=paloma-testnet-5 \
 --node cat "$HOME/.paloma/config/config.toml" \
 | grep -oPm1 "(?<=^laddr = \")([^%]+)(?=\")"
 ```
@@ -246,7 +246,7 @@ palomad tx staking edit-validator \
 palomad tx slashing unjail \
   --broadcast-mode=block \
   --from=<wallet_name> \
-  --chain-id=paloma \
+  --chain-id=paloma-testnet-5 \
   --gas=auto
 ```
 ##### Delete node
