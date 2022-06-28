@@ -235,6 +235,6 @@ sudo systemctl stop defundd
 sudo systemctl disable defundd
 sudo rm /etc/systemd/system/defund* -rf
 sudo rm $(which defundd) -rf
-rm $HOME/.defund* -rf
-rm $HOME/defund -rf
+sudo rm $HOME/.defund* -rf
+sudo rm $HOME/defund -rf
 ```
