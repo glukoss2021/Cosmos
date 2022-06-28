@@ -219,7 +219,8 @@ defundd tx staking edit-validator \
 --website=<web> \
 --details=<any details> \
 --chain-id=defund-private-1 \
---from=<wallet_name>
+--from=<wallet_name> \
+--gas=auto
 ```
 ##### Unjail validator
 ```Bash
@@ -231,10 +232,10 @@ defundd tx slashing unjail \
 ```
 ##### Delete node
 ```Bash
-sudo systemctl stop defundd
-sudo systemctl disable defundd
-sudo rm /etc/systemd/system/defund* -rf
-sudo rm $(which defundd) -rf
-sudo rm $HOME/.defund* -rf
+sudo systemctl stop defundd && \
+sudo systemctl disable defundd && \
+sudo rm /etc/systemd/system/defund* -rf && \
+sudo rm $(which defundd) -rf && \
+sudo rm $HOME/.defund* -rf && \
 sudo rm $HOME/defund -rf
 ```
