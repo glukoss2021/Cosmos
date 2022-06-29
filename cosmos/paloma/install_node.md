@@ -251,10 +251,10 @@ palomad tx slashing unjail \
 ```
 ##### Delete node
 ```Bash
-sudo systemctl stop palomad
-sudo systemctl disable palomad
-sudo rm /etc/systemd/system/paloma* -rf
-sudo rm $(which palomad) -rf
-rm $HOME/.paloma* -rf
-rm $HOME/paloma -rf
+sudo systemctl stop palomad && \
+sudo systemctl disable palomad && \
+sudo rm /etc/systemd/system/paloma* -rf && \
+sudo rm $(which palomad) -rf && \
+sudo rm $HOME/.paloma* -rf && \
+sudo rm $HOME/paloma -rf
 ```
